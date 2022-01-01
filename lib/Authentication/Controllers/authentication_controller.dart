@@ -13,6 +13,8 @@ class AuthenticationController extends GetxController {
   FirebaseFirestore firebaseFirestore = FirebaseFirestore.instance;
   GoogleSignIn googleSign = GoogleSignIn();
 
+  var isSigningUp = false.obs;
+
   @override
   void onReady() {
     super.onReady();
