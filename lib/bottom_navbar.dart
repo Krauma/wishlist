@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 import 'package:wishlist/Events/Views/event_list_page.dart';
+import 'package:wishlist/Friends/Views/friends_list_page.dart';
 import 'package:wishlist/Profile/Views/profile_page.dart';
 import 'package:wishlist/Wishes/Views/wish_list_page.dart';
 
@@ -22,7 +23,7 @@ class _BottomNavbarState extends State<BottomNavbar> {
   }
 
   List<Widget> _buildScreens() {
-    return const [EventListPage(), WishListPage(), ProfilePage()];
+    return const [EventListPage(), WishListPage(), ProfilePage(), FriendsListPage()];
   }
 
   List<PersistentBottomNavBarItem> _navBarsItems() {
@@ -36,6 +37,12 @@ class _BottomNavbarState extends State<BottomNavbar> {
       PersistentBottomNavBarItem(
         icon: const Icon(CupertinoIcons.gift),
         title: ("Wishes"),
+        activeColorPrimary: CupertinoColors.activeBlue,
+        inactiveColorPrimary: CupertinoColors.systemGrey,
+      ),
+      PersistentBottomNavBarItem(
+        icon: const Icon(CupertinoIcons.group),
+        title: ("Friends"),
         activeColorPrimary: CupertinoColors.activeBlue,
         inactiveColorPrimary: CupertinoColors.systemGrey,
       ),
