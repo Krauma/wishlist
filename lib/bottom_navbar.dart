@@ -1,9 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
-import 'package:wishlist/Friends/Views/friends_list_page.dart';
 import 'package:wishlist/Profile/Views/profile_page.dart';
-import 'package:wishlist/Wishes/Views/wish_list_page.dart';
 import 'Products/Views/product_list_page.dart';
 
 class BottomNavbar extends StatefulWidget {
@@ -23,26 +21,14 @@ class _BottomNavbarState extends State<BottomNavbar> {
   }
 
   List<Widget> _buildScreens() {
-    return [ProductListPage(), const WishListPage(), const ProfilePage(), const FriendsListPage()];
+    return [ProductListPage(), const ProfilePage()];
   }
 
   List<PersistentBottomNavBarItem> _navBarsItems() {
     return [
       PersistentBottomNavBarItem(
-        icon: const Icon(CupertinoIcons.calendar),
+        icon: const Icon(Icons.shopping_basket),
         title: ("Products"),
-        activeColorPrimary: CupertinoColors.activeBlue,
-        inactiveColorPrimary: CupertinoColors.systemGrey,
-      ),
-      PersistentBottomNavBarItem(
-        icon: const Icon(CupertinoIcons.gift),
-        title: ("Wishes"),
-        activeColorPrimary: CupertinoColors.activeBlue,
-        inactiveColorPrimary: CupertinoColors.systemGrey,
-      ),
-      PersistentBottomNavBarItem(
-        icon: const Icon(CupertinoIcons.group),
-        title: ("Friends"),
         activeColorPrimary: CupertinoColors.activeBlue,
         inactiveColorPrimary: CupertinoColors.systemGrey,
       ),

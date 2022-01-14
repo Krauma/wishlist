@@ -1,5 +1,5 @@
 import 'package:get/state_manager.dart';
-import 'package:wishlist/Events/Models/product.dart';
+import 'package:wishlist/Products/Models/product.dart';
 import 'package:wishlist/Services/api_service.dart';
 
 class ProductController extends GetxController {

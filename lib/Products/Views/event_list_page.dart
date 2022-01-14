@@ -4,9 +4,8 @@ import 'package:wishlist/Products/Controllers/product_controller.dart';
 import 'package:wishlist/Products/Views/product_card.dart';
 import 'package:wishlist/Products/Views/product_loader.dart';
 
-
-class ProductListPage extends StatelessWidget {
-  ProductListPage({Key? key}) : super(key: key);
+class EventListPage extends StatelessWidget {
+  EventListPage({Key? key}) : super(key: key);
   final ProductController productController = Get.put(ProductController());
 
   @override
@@ -40,7 +39,7 @@ class ProductListPage extends StatelessWidget {
                                 mainAxisSpacing: 16),
                         itemCount: 4,
                         itemBuilder: (BuildContext ctx, index) {
-                          return const ProductLoader();
+                          return ProductLoader();
                         }),
                   );
                 } else {
