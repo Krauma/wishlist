@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
-import 'package:wishlist/Events/Views/event_list_page.dart';
 import 'package:wishlist/Friends/Views/friends_list_page.dart';
 import 'package:wishlist/Profile/Views/profile_page.dart';
 import 'package:wishlist/Wishes/Views/wish_list_page.dart';
+import 'Products/Views/product_list_page.dart';
 
 class BottomNavbar extends StatefulWidget {
   const BottomNavbar({Key? key}) : super(key: key);
@@ -23,14 +23,14 @@ class _BottomNavbarState extends State<BottomNavbar> {
   }
 
   List<Widget> _buildScreens() {
-    return const [EventListPage(), WishListPage(), ProfilePage(), FriendsListPage()];
+    return [ProductListPage(), const WishListPage(), const ProfilePage(), const FriendsListPage()];
   }
 
   List<PersistentBottomNavBarItem> _navBarsItems() {
     return [
       PersistentBottomNavBarItem(
         icon: const Icon(CupertinoIcons.calendar),
-        title: ("Events"),
+        title: ("Products"),
         activeColorPrimary: CupertinoColors.activeBlue,
         inactiveColorPrimary: CupertinoColors.systemGrey,
       ),
